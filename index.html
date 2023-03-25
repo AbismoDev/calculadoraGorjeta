@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONTES PERSONALIZADAS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!---->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora de Gorjeta</title>
+</head>
+<body> 
+    <div class="container">
+        <header>
+            <a href="https://www.abismodev.com" target="_blank">
+                <img class="logo" src="assets/logo.svg" 
+                alt="Logo AbismoDev" title="AbismoDev">
+            </a>
+        </header>
+        <main oninput="atualizaDados()"><!--Com o "oninput", ele irá att a página toda vez que um input tiver sido mexido-->
+            <section>
+                <div class="container-app">
+                    <div class="titulo">
+                        <h1>Calculadora de Gorjeta</h1>
+                    </div>
+                    <div class="container-dados">
+                        <div class="entrada-conta">
+                            <label for="valorConta">Valor da Conta</label>
+                            <input type="number" name="valor_conta" id="valorConta">
+                        </div>
+                        <div>
+                            <div class="espaco">
+                                <span>Selecione a Gorjeta</span>
+                                <span id="taxaPorcentagem">0 %</span>
+                            </div>
+                            <div class="seletor-porcentagem">
+                                <input type="range" value="0" name="seletor-porcentagem" id="seletorPorcentagem">
+                            </div>
+                        </div>
+                        <div class="espaco">
+                            <span>Gorjeta</span>
+                            <span id="taxaGorjeta">R$ 0,00</span>
+                        </div>
+                        <hr>
+                        <div class="espaco">
+                            <h2>Total</h2>
+                            <h3 id="totalConta">R$ 0,00</h3>
+                        </div>
+                    </div>
+                    <div class="container-divisao">
+                        <div class="entrada-divisao">
+                            <div class="espaco">
+                                <span>Dividir entre</span>
+                                <span id="pessoasDivisao">1 Pessoa</span>
+                            </div>
+                            <div class="seletor-porcentagem">
+                                <input type="range" name="seletor-pessoas" min="1" max="10" value="1" id="seletorPessoas">
+                            </div>
+                        </div>
+                        <div class="espaco">
+                            <span>Cobrar de cada um</span>
+                            <span id="cobrarCada">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container-footer">
+                <div class="link-rodape">
+                    <nav class="nav-rodape">
+                        <ul>
+                            <li><a href="https://github.com/AbismoDev" target="_blank">Github</a></li>
+                            <li><a href="https://abismodev.com/" target="_blank">Portifólio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="creditos">
+                    <p>Site desenvolvido com <img class="icon-coracao" src="assets/icon-coracao.svg" alt="amor" title="Amor"> por <a href="https://www.instagram.com/welli.18" target="_blank">AbismoDev</a>.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
